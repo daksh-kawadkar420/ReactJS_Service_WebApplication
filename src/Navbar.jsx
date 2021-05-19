@@ -1,0 +1,81 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <>
+      <div className="container-fluid nav_bg">
+        <div className="row">
+          <div className="col-10 mx-auto">
+            <nav className="navbar navbar-expand-lg navbar-light">
+              <div className="container-fluid">
+                <NavLink className="navbar-brand brand mb-2" to="/">
+                  Tech Training
+                </NavLink>
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  className="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul className="navbar-nav ms-auto mb-2 md-lg-0">
+                    <li className="nav-item">
+                      <NavLink
+                        exact
+                        className="nav-link"
+                        activeClassName="menu_active"
+                        aria-current="page"
+                        to="/"
+                      >
+                        Home
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink
+                        activeClassName="menu_active"
+                        className="nav-link"
+                        to="/about"
+                      >
+                        About
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink
+                        className="nav-link"
+                        to="/service"
+                        activeClassName="menu_active"
+                      >
+                        Service
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink
+                        className="nav-link"
+                        to="/contact"
+                        activeClassName="menu_active"
+                      >
+                        Contact
+                      </NavLink>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Navbar;
